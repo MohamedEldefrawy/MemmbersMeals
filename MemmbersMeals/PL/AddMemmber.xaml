@@ -9,7 +9,7 @@
     <Grid>
         <Label Content="Name" HorizontalAlignment="Left" Margin="4,7,0,0" VerticalAlignment="Top" Name="lblName"/>
         <Label Content="Credit" HorizontalAlignment="Left" Margin="4,46,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="47,11,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Name="txtName" Focusable="True"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="47,11,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Name="txtName" ForceCursor="True"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="47,50,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Name="txtCredit"/>
         <Button Content="Save" HorizontalAlignment="Left" Margin="47,88,0,0" VerticalAlignment="Top" Width="120" Name="btnSave" Click="btnSave_Click"/>
     </Grid>

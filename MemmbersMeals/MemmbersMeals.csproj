@@ -93,10 +93,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="BL\Repository\IMemmberRepository.cs" />
-    <Compile Include="BL\Repository\IRepository.cs" />
-    <Compile Include="BL\Repository\MemmberRepository.cs" />
-    <Compile Include="BL\Repository\Repository.cs" />
+    <Compile Include="BL\TheRepository\IMemmberRepository.cs" />
+    <Compile Include="BL\TheRepository\IRepository.cs" />
+    <Compile Include="BL\TheRepository\MemmberRepository.cs" />
+    <Compile Include="BL\TheRepository\Repository.cs" />
     <Compile Include="PL\AddMemmber.xaml.cs">
       <DependentUpon>AddMemmber.xaml</DependentUpon>
     </Compile>

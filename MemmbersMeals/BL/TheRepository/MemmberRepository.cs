@@ -3,8 +3,7 @@ using System.Collections.Generic;
 
 namespace MemmbersMeals.BL.Repository
 {
-
-    class MemmberRepository : Repository<Memmber>, IMemmberRepository
+    public class MemmberRepository : Repository<Memmber>, IMemmberRepository
     {
         public MemmberRepository(MealsModel model)
             : base(model)

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MemmbersMeals.BL.Repository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,15 +20,16 @@ namespace MemmbersMeals
     /// </summary>
     public partial class AddMemmber : Window
     {
-        private object MemmbersRepository;
-
         public AddMemmber()
         {
             InitializeComponent();
+            txtName.Focus();
         }
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
+            var Name = txtName.Text;
+            var Creadit = decimal.Parse(txtCredit.Text);
         }
     }
 }
