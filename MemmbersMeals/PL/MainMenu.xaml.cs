@@ -24,5 +24,11 @@ namespace MemmbersMeals
         {
             InitializeComponent();
         }
+
+        private void mnitmAddMemmber_Click(object sender, RoutedEventArgs e)
+        {
+            AddMemmber addMemmber = new AddMemmber();
+            addMemmber.Show();
+        }
     }
 }
