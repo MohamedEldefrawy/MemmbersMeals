@@ -1,4 +1,4 @@
-namespace OffciersMeals
+namespace MemmbersMeals
 {
     using System;
     using System.Collections.Generic;

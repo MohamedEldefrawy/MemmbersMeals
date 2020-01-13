@@ -1,4 +1,4 @@
-namespace OffciersMeals
+namespace MemmbersMeals
 {
     using System;
     using System.Collections.Generic;
@@ -17,8 +17,8 @@ namespace OffciersMeals
         [Column(TypeName = "date")]
         public DateTime MealsDate { get; set; }
 
-        public int? OffcierID { get; set; }
+        public int? MemmberID { get; set; }
 
-        public virtual Offcier Offcier { get; set; }
+        public virtual Memmber Memmber { get; set; }
     }
 }

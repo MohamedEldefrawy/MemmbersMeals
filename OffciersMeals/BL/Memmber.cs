@@ -1,4 +1,4 @@
-namespace OffciersMeals
+namespace MemmbersMeals
 {
     using System;
     using System.Collections.Generic;
@@ -6,10 +6,10 @@ namespace OffciersMeals
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class Offcier
+    public partial class Memmber
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Offcier()
+        public Memmber()
         {
             Meals = new HashSet<Meal>();
         }

@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace OffciersMeals
+namespace MemmbersMeals
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

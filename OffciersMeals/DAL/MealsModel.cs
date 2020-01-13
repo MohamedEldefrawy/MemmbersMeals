@@ -1,4 +1,4 @@
-namespace OffciersMeals
+namespace MemmbersMeals
 {
     using System;
     using System.Data.Entity;
@@ -13,7 +13,7 @@ namespace OffciersMeals
         }
 
         public virtual DbSet<Meal> Meals { get; set; }
-        public virtual DbSet<Offcier> Offciers { get; set; }
+        public virtual DbSet<Memmber> Memmbers { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -22,7 +22,7 @@ namespace OffciersMeals
                 .Property(e => e.Price)
                 .HasPrecision(9, 2);
 
-            modelBuilder.Entity<Offcier>()
+            modelBuilder.Entity<Memmber>()
                 .Property(e => e.Credit)
                 .HasPrecision(9, 2);
         }

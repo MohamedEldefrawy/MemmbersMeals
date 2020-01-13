@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace OffciersMeals.Properties
+namespace MemmbersMeals.Properties
 {
 
 
