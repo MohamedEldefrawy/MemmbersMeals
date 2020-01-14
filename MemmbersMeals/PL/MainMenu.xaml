@@ -9,8 +9,6 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="37*"/>
-            <ColumnDefinition Width="100*"/>
-            <ColumnDefinition Width="191*"/>
         </Grid.ColumnDefinitions>
         <DockPanel Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="32" LastChildFill="False" Margin="0,3,0,0" VerticalAlignment="Top" Width="318">
             <Menu DockPanel.Dock="Top">

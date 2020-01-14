@@ -7,13 +7,13 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MemmbersMeals.BL.Repository
+namespace MemmbersMeals.BL.Repositories
 {
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     {
-        private readonly MealsModel context;
+        private readonly DbContext context;
 
-        public Repository(MealsModel context)
+        public Repository(DbContext context)
         {
             this.context = context;
         }
@@ -30,7 +30,7 @@ namespace MemmbersMeals.BL.Repository
 
         public IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate)
         {
-           return context.Set<TEntity>().Where<TEntity>(predicate);
+            return context.Set<TEntity>().Where<TEntity>(predicate);
         }
 
         public TEntity Get(int id)
@@ -55,8 +55,8 @@ namespace MemmbersMeals.BL.Repository
 
         public void Update(TEntity entity)
         {
-          context.Set<TEntity>().AddOrUpdate(entity);
-           
+            context.Set<TEntity>().AddOrUpdate(entity);
+
         }
     }
 }

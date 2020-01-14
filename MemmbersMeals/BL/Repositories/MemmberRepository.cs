@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace MemmbersMeals.BL.Repository
+namespace MemmbersMeals.BL.Repositories
 {
     public class MemmberRepository : Repository<Memmber>, IMemmberRepository
     {

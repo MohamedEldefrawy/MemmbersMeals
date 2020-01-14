@@ -93,14 +93,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="BL\TheRepository\IMemmberRepository.cs" />
-    <Compile Include="BL\TheRepository\IRepository.cs" />
-    <Compile Include="BL\TheRepository\MemmberRepository.cs" />
-    <Compile Include="BL\TheRepository\Repository.cs" />
+    <Compile Include="BL\IUnitOfWork.cs" />
+    <Compile Include="BL\Repositories\IMealRepository.cs" />
+    <Compile Include="BL\Repositories\IMemmberRepository.cs" />
+    <Compile Include="BL\Repositories\IRepository.cs" />
+    <Compile Include="BL\Repositories\MealRepository.cs" />
+    <Compile Include="BL\Repositories\MemmberRepository.cs" />
+    <Compile Include="BL\Repositories\Repository.cs" />
+    <Compile Include="DAL\UnitOFWork.cs" />
     <Compile Include="PL\AddMemmber.xaml.cs">
       <DependentUpon>AddMemmber.xaml</DependentUpon>
     </Compile>
-    <Compile Include="sysdiagram.cs" />
     <Page Include="PL\AddMemmber.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -119,9 +122,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BL\Meal.cs" />
+    <Compile Include="BL\Domain\Meal.cs" />
     <Compile Include="DAL\MealsModel.cs" />
-    <Compile Include="BL\Memmber.cs" />
+    <Compile Include="BL\Domain\Memmber.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

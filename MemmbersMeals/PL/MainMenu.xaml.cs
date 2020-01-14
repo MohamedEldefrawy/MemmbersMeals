@@ -22,9 +22,9 @@ namespace MemmbersMeals
     {
         public MainWindow()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
-
+            
         private void mnitmAddMemmber_Click(object sender, RoutedEventArgs e)
         {
             AddMemmber addMemmber = new AddMemmber();

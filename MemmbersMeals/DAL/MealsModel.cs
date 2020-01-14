@@ -14,7 +14,6 @@ namespace MemmbersMeals
 
         public virtual DbSet<Meal> Meals { get; set; }
         public virtual DbSet<Memmber> Memmbers { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

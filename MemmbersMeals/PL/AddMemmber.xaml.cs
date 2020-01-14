@@ -1,4 +1,4 @@
-﻿using MemmbersMeals.BL.Repository;
+﻿using MemmbersMeals.BL.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,8 +28,6 @@ namespace MemmbersMeals
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-            var Name = txtName.Text;
-            var Creadit = decimal.Parse(txtCredit.Text);
         }
     }
 }

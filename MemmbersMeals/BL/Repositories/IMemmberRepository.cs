@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 
-namespace MemmbersMeals.BL.Repository
+namespace MemmbersMeals.BL.Repositories
 {
-    interface IMemmberRepository: IRepository<Memmber>
+   public interface IMemmberRepository: IRepository<Memmber>
     {
         IEnumerable<Memmber> GetInDebitMemmbers();
         IEnumerable<Memmber> GetDebitMemmbers();
