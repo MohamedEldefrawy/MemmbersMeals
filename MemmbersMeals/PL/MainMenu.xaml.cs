@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MemmbersMeals.DAL;
+using MemmbersMeals.PL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,15 +22,27 @@ namespace MemmbersMeals
     /// </summary>
     public partial class MainWindow : Window
     {
+        UnitOFWork unitOFWork = new UnitOFWork(new MealsModel());
         public MainWindow()
         {
-            InitializeComponent();            
+            InitializeComponent();
         }
-            
+
         private void mnitmAddMemmber_Click(object sender, RoutedEventArgs e)
         {
             AddMemmber addMemmber = new AddMemmber();
             addMemmber.Show();
+        }
+
+        private void btnViewMemmbers_Click(object sender, RoutedEventArgs e)
+        {
+            dgMemmbers.ItemsSource = unitOFWork.Memmbers.GetAll();
+        }
+
+        private void mnitmAddMeal_Click(object sender, RoutedEventArgs e)
+        {
+            AddMeal addMeal = new AddMeal();
+            addMeal.Show();
         }
     }
 }

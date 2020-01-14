@@ -1,4 +1,5 @@
 ﻿using MemmbersMeals.BL.Repositories;
+using MemmbersMeals.DAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,7 @@ namespace MemmbersMeals
     /// </summary>
     public partial class AddMemmber : Window
     {
+        UnitOFWork unitOFWork = new UnitOFWork(new MealsModel());
         public AddMemmber()
         {
             InitializeComponent();
@@ -28,6 +30,17 @@ namespace MemmbersMeals
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
+            unitOFWork.Memmbers.Add(new Memmber
+            {
+                Name = txtName.Text,
+                Credit = Decimal.Parse(txtCredit.Text)
+            });
+
+            unitOFWork.Complete();
+            txtName.Clear();
+            txtCredit.Clear();
+            MessageBox.Show("Done..");
+            unitOFWork.Dispose();
         }
     }
 }

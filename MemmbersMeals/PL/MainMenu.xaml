@@ -25,7 +25,7 @@
                                 <Image Source="/Pl/Icons/addMemmber.png"/>
                             </MenuItem.Icon>
                         </MenuItem>
-                        <MenuItem Header="Meal" Name="mnitmAddMeal">
+                        <MenuItem Header="Meal" Name="mnitmAddMeal" Click="mnitmAddMeal_Click">
                             <MenuItem.Icon>
                                 <Image Source="/Pl/Icons/addMeal.png"/>
                             </MenuItem.Icon>
@@ -36,7 +36,7 @@
                     <MenuItem.Icon>
                         <Image Source="/Pl/Icons/view.png"/>
                     </MenuItem.Icon>
-                    <MenuItem Header="Memmbers">
+                    <MenuItem x:Name="btnViewMemmbers" Header="Memmbers" Click="btnViewMemmbers_Click">
                         <MenuItem.Icon>
                             <Image Source="/Pl/Icons/memmbers.png"/>
                         </MenuItem.Icon>
@@ -49,11 +49,12 @@
                     <MenuItem Header="About">
                         <MenuItem.Icon>
                             <Image Source="/Pl/Icons/about.png  "/>
-                        </MenuItem.Icon> 
+                        </MenuItem.Icon>
                     </MenuItem>
                 </MenuItem>
             </Menu>
         </DockPanel>
+        <DataGrid x:Name="dgMemmbers" HorizontalAlignment="Left" Height="261" Margin="0,35,0,0" VerticalAlignment="Top" Width="328"/>
 
 
     </Grid>
