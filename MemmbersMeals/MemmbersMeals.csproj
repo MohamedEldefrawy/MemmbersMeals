@@ -61,7 +61,8 @@
     <StartupObject>MemmbersMeals.App</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>App.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -132,6 +133,7 @@
     <Compile Include="BL\Domain\Meal.cs" />
     <Compile Include="DAL\MealsModel.cs" />
     <Compile Include="BL\Domain\Memmber.cs" />
+    <Compile Include="PL\MealsType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -200,9 +202,6 @@
     <Resource Include="PL\Icons\help.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="App.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
@@ -215,7 +214,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="PL\addMeal.png" />
+    <Resource Include="PL\Icons\meal.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PL\meal.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
