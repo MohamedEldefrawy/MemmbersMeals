@@ -20,11 +20,12 @@
                         <MenuItem.Icon>
                             <Image Source="/PL/Icons/add.png"/>
                         </MenuItem.Icon>
-                        <MenuItem Header="Memmber"  Name="mnitmAddMemmber" Click="mnitmAddMemmber_Click">
+                        <MenuItem Header="All Memmber"  Name="mnitmAddMemmber" Click="mnitmAddMemmber_Click">
                             <MenuItem.Icon>
                                 <Image Source="/Pl/Icons/addMemmber.png"/>
                             </MenuItem.Icon>
                         </MenuItem>
+
                         <MenuItem Header="Meal" Name="mnitmAddMeal" Click="mnitmAddMeal_Click">
                             <MenuItem.Icon>
                                 <Image Source="/Pl/Icons/addMeal.png"/>
@@ -36,9 +37,19 @@
                     <MenuItem.Icon>
                         <Image Source="/Pl/Icons/view.png"/>
                     </MenuItem.Icon>
-                    <MenuItem x:Name="btnViewMemmbers" Header="Memmbers" Click="btnViewMemmbers_Click">
+                    <MenuItem x:Name="btnViewAllMemmbers" Header="All Memmbers" Click="btnViewAllMemmbers_Click">
                         <MenuItem.Icon>
                             <Image Source="/Pl/Icons/memmbers.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Debt Memmbers" x:Name="btnViewAllDebtMemmbers" Click="btnViewAllDebtMemmbers_Click">
+                        <MenuItem.Icon>
+                            <Image Source="/Pl/Icons/account-debtor.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="In Debt Memmbers" x:Name="btnViewAllInDebtMemmbers" Click="btnViewAllInDebtMemmbers_Click">
+                        <MenuItem.Icon>
+                            <Image Source="/Pl/Icons/debt.png"/>
                         </MenuItem.Icon>
                     </MenuItem>
                 </MenuItem>
@@ -54,7 +65,14 @@
                 </MenuItem>
             </Menu>
         </DockPanel>
-        <DataGrid x:Name="dgMemmbers" HorizontalAlignment="Left" Height="261" Margin="0,35,0,0" VerticalAlignment="Top" Width="328"/>
+        <DataGrid x:Name="dgMemmbers" HorizontalAlignment="Left" Height="261" Margin="0,35,0,0" 
+                  VerticalAlignment="Top" Width="328" IsSynchronizedWithCurrentItem="True" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding ID}"/>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="Credit" Binding="{Binding Credit}"/>
+            </DataGrid.Columns>
+        </DataGrid>
 
 
     </Grid>

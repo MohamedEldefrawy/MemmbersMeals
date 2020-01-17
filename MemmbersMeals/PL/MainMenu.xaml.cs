@@ -26,6 +26,9 @@ namespace MemmbersMeals
         public MainWindow()
         {
             InitializeComponent();
+            dgMemmbers.ItemsSource = unitOFWork.Memmbers.GetAll().ToList();
+
+
         }
 
         private void mnitmAddMemmber_Click(object sender, RoutedEventArgs e)
@@ -34,15 +37,25 @@ namespace MemmbersMeals
             addMemmber.Show();
         }
 
-        private void btnViewMemmbers_Click(object sender, RoutedEventArgs e)
+        private void btnViewAllMemmbers_Click(object sender, RoutedEventArgs e)
         {
-            dgMemmbers.ItemsSource = unitOFWork.Memmbers.GetAll();
+            dgMemmbers.ItemsSource = unitOFWork.Memmbers.GetAll().ToList();
         }
 
         private void mnitmAddMeal_Click(object sender, RoutedEventArgs e)
         {
             AddMeal addMeal = new AddMeal();
             addMeal.Show();
+        }
+
+        private void btnViewAllDebtMemmbers_Click(object sender, RoutedEventArgs e)
+        {
+            dgMemmbers.ItemsSource = unitOFWork.Memmbers.GetDebitMemmbers().ToList();
+        }
+
+        private void btnViewAllInDebtMemmbers_Click(object sender, RoutedEventArgs e)
+        {
+            dgMemmbers.ItemsSource = unitOFWork.Memmbers.GetInDebitMemmbers().ToList();
         }
     }
 }

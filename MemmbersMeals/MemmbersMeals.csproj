@@ -219,6 +219,12 @@
   <ItemGroup>
     <Resource Include="PL\meal.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PL\Icons\account-debtor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PL\Icons\debt.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
