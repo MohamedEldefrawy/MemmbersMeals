@@ -33,8 +33,8 @@ namespace MemmbersMeals.PL
                 MealsDate = datpicMeal.SelectedDate,
                 MealType = cmbMealType.SelectedIndex,
                 Price = decimal.Parse(txtPrice.Text),
-                MemmberID = unitOfWork.Memmbers.Find(m => m.Name == cmbMemmber.SelectedItem.ToString())
-                .FirstOrDefault().ID
+                Memmber = unitOfWork.Memmbers.Find(m => m.Name == cmbMemmber.SelectedItem.ToString())
+                .FirstOrDefault()
             });
 
             unitOfWork.Complete();

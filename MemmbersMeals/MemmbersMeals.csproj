@@ -102,6 +102,15 @@
     <Compile Include="BL\Repositories\MemmberRepository.cs" />
     <Compile Include="BL\Repositories\Repository.cs" />
     <Compile Include="DAL\UnitOFWork.cs" />
+    <Compile Include="Migrations\202001181539019_InitialMigration.cs" />
+    <Compile Include="Migrations\202001181539019_InitialMigration.designer.cs">
+      <DependentUpon>202001181539019_InitialMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001181610247_RenameForiegnKeyMemmberID.cs" />
+    <Compile Include="Migrations\202001181610247_RenameForiegnKeyMemmberID.designer.cs">
+      <DependentUpon>202001181610247_RenameForiegnKeyMemmberID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PL\AddMeal.xaml.cs">
       <DependentUpon>AddMeal.xaml</DependentUpon>
     </Compile>
@@ -154,6 +163,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Migrations\202001181539019_InitialMigration.resx">
+      <DependentUpon>202001181539019_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001181610247_RenameForiegnKeyMemmberID.resx">
+      <DependentUpon>202001181610247_RenameForiegnKeyMemmberID.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

@@ -18,6 +18,11 @@ namespace MemmbersMeals
                 .Property(e => e.Price)
                 .HasPrecision(9, 2);
 
+            modelBuilder.Entity<Meal>()
+                .HasRequired(m => m.Memmber)
+                .WithMany(a => a.Meals)
+                .HasForeignKey(m => m.MemmberID);
+
             modelBuilder.Entity<Memmber>()
                 .Property(e => e.Credit)
                 .HasPrecision(9, 2);
