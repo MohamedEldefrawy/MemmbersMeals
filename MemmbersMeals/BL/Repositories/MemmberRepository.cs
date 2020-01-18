@@ -35,7 +35,7 @@ namespace MemmbersMeals.BL.Repositories
             {
                 result.Name = memmber.Name;
                 result.Credit = memmber.Credit;
-                context.SaveChanges();
+                context.Entry(result).State = EntityState.Modified;
             }
         }
     }
