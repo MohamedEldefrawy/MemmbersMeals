@@ -49,12 +49,6 @@ namespace MemmbersMeals.BL.Repositories
         public void RemoveRange(IEnumerable<TEntity> entities)
         {
             context.Set<TEntity>().RemoveRange(entities);
-        }
-
-        public void Update(TEntity entity)
-        {
-            context.Set<TEntity>().AddOrUpdate(entity);
-
-        }
+        }        
     }
 }

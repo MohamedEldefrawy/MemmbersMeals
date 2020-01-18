@@ -8,5 +8,7 @@ namespace MemmbersMeals.BL.Repositories
         IEnumerable<Memmber> GetDebitMemmbers();
 
         IEnumerable<Memmber> GetMemmberbyName(string name);
+
+        void UpdateMemmber(Memmber memmber);
     }
 }

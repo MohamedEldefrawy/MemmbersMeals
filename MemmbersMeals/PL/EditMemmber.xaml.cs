@@ -21,19 +21,44 @@ namespace MemmbersMeals.PL
     public partial class EditMemmber : Window
     {
         UnitOFWork unitOfWork = new UnitOFWork(new MealsModel());
-        private Memmber selectedMemmber;
+        public int ID { get; set; }
+        private Memmber SelectedMemmber;
 
         public EditMemmber(int MemmberID)
         {
             InitializeComponent();
-            selectedMemmber = unitOfWork.Memmbers.Get(MemmberID);
-            txtName.Text = selectedMemmber.Name;
-            txtCredit.Text = selectedMemmber.Credit.ToString();
+            this.ID = MemmberID;
+            SelectedMemmber = unitOfWork.Memmbers.Get(MemmberID);
+            txtName.Text = SelectedMemmber.Name;
+            txtCredit.Text = SelectedMemmber.Credit.ToString();
         }
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-            // Do somthing
+            SelectedMemmber.Name = txtName.Text;
+            SelectedMemmber.Credit = decimal.Parse(txtCredit.Text);
+
+            unitOfWork.Memmbers.UpdateMemmber(SelectedMemmber);
+            MessageBoxResult result = MessageBox.Show("Are you sure ?",
+                "Alert message", MessageBoxButton.YesNo);
+            switch (result)
+            {
+                case MessageBoxResult.Yes:
+                    unitOfWork.Complete();
+                    unitOfWork.Dispose();
+                    break;
+                case MessageBoxResult.No:
+                    break;
+                case MessageBoxResult.None:
+                    break;
+                case MessageBoxResult.OK:
+                    break;
+                case MessageBoxResult.Cancel:
+                    break;
+                default:
+                    break;
+            }
+
         }
     }
 }

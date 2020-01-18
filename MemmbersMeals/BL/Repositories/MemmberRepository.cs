@@ -27,5 +27,16 @@ namespace MemmbersMeals.BL.Repositories
         {
             return context.Set<Memmber>().Where(m => m.Name.Contains(name)).ToList();
         }
+
+        public void UpdateMemmber(Memmber memmber)
+        {
+            var result = context.Set<Memmber>().SingleOrDefault(m => m.ID == memmber.ID);
+            if (result != null)
+            {
+                result.Name = memmber.Name;
+                result.Credit = memmber.Credit;
+                context.SaveChanges();
+            }
+        }
     }
 }
