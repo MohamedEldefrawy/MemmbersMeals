@@ -40,7 +40,7 @@ namespace MemmbersMeals.PL
 
             unitOfWork.Memmbers.UpdateMemmber(SelectedMemmber);
             MessageBoxResult result = MessageBox.Show("Are you sure ?",
-                "Alert message", MessageBoxButton.YesNo);
+                "Alert", MessageBoxButton.YesNo, MessageBoxImage.Warning);
             switch (result)
             {
                 case MessageBoxResult.Yes:

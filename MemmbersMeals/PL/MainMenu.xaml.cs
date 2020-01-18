@@ -68,7 +68,7 @@ namespace MemmbersMeals
 
         private void btnDeleteMemmber_Click(object sender, RoutedEventArgs e)
         {
-            var result = MessageBox.Show("Are you sure", "Alert", MessageBoxButton.YesNo);
+            var result = MessageBox.Show("Are you sure", "Alert", MessageBoxButton.YesNo, MessageBoxImage.Warning);
             SelectedMemmber = (Memmber)dgMemmbers.SelectedItem;
             switch (result)
             {
