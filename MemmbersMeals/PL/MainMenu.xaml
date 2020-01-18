@@ -4,76 +4,74 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MemmbersMeals"
+        xmlns:uc="clr-namespace:SearchBox;assembly=SearchBox"
         mc:Ignorable="d"
-        Title="Memmbers Meals" Height="327" Width="336.5" Icon="Icons/MemmbersMeals.png" WindowStartupLocation="CenterScreen" HorizontalAlignment="Center">
+        Title="Memmbers Meals" Height="327" Width="316.5" Icon="Icons/MemmbersMeals.png" WindowStartupLocation="CenterScreen" HorizontalAlignment="Center" ResizeMode="NoResize">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="37*"/>
-        </Grid.ColumnDefinitions>
-        <DockPanel Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="32" LastChildFill="False" Margin="0,3,0,0" VerticalAlignment="Top" Width="318">
-            <Menu DockPanel.Dock="Top">
+        <DockPanel HorizontalAlignment="Left" Height="auto" LastChildFill="False" VerticalAlignment="Top" Width="310">
+            <Menu DockPanel.Dock="Top" Height="auto" Width="auto" >
                 <MenuItem Header="File">
                     <MenuItem.Icon>
-                        <Image Source="/PL/Icons/file.png"/>
+                        <Image Source="./Icons/file.png"/>
                     </MenuItem.Icon>
                     <MenuItem Header="Add">
                         <MenuItem.Icon>
-                            <Image Source="/PL/Icons/add.png"/>
+                            <Image Source="./Icons/add.png"/>
                         </MenuItem.Icon>
-                        <MenuItem Header="All Memmber"  Name="mnitmAddMemmber" Click="mnitmAddMemmber_Click">
+                        <MenuItem Header="All Memmber"  Name="mnitmAddMemmber" Click="MnitmAddMemmber_Click">
                             <MenuItem.Icon>
-                                <Image Source="/Pl/Icons/addMemmber.png"/>
+                                <Image Source="./Icons/addMemmber.png"/>
                             </MenuItem.Icon>
                         </MenuItem>
 
-                        <MenuItem Header="Meal" Name="mnitmAddMeal" Click="mnitmAddMeal_Click">
+                        <MenuItem Header="Meal" Name="mnitmAddMeal" Click="MnitmAddMeal_Click">
                             <MenuItem.Icon>
-                                <Image Source="/Pl/Icons/addMeal.png"/>
+                                <Image Source="./Icons/addMeal.png"/>
                             </MenuItem.Icon>
                         </MenuItem>
                     </MenuItem>
                 </MenuItem>
                 <MenuItem Header="View">
                     <MenuItem.Icon>
-                        <Image Source="/Pl/Icons/view.png"/>
+                        <Image Source="./Icons/view.png"/>
                     </MenuItem.Icon>
-                    <MenuItem x:Name="btnViewAllMemmbers" Header="All Memmbers" Click="btnViewAllMemmbers_Click">
+                    <MenuItem x:Name="btnViewAllMemmbers" Header="All Memmbers" Click="BtnViewAllMemmbers_Click">
                         <MenuItem.Icon>
-                            <Image Source="/Pl/Icons/memmbers.png"/>
+                            <Image Source="./Icons/memmbers.png"/>
                         </MenuItem.Icon>
                     </MenuItem>
-                    <MenuItem Header="Debt Memmbers" x:Name="btnViewAllDebtMemmbers" Click="btnViewAllDebtMemmbers_Click">
+                    <MenuItem Header="Debt Memmbers" x:Name="btnViewAllDebtMemmbers" Click="BtnViewAllDebtMemmbers_Click">
                         <MenuItem.Icon>
-                            <Image Source="/Pl/Icons/account-debtor.png"/>
+                            <Image Source="./Icons/account-debtor.png"/>
                         </MenuItem.Icon>
                     </MenuItem>
-                    <MenuItem Header="In Debt Memmbers" x:Name="btnViewAllInDebtMemmbers" Click="btnViewAllInDebtMemmbers_Click">
+
+                    <MenuItem Header="In Debt Memmbers" x:Name="btnViewAllInDebtMemmbers" Click="BtnViewAllInDebtMemmbers_Click">
                         <MenuItem.Icon>
-                            <Image Source="/Pl/Icons/debt.png"/>
+                            <Image Source="./Icons/debt.png"/>
                         </MenuItem.Icon>
                     </MenuItem>
                 </MenuItem>
                 <MenuItem Header="Help">
                     <MenuItem.Icon>
-                        <Image Source="/Pl/Icons/help.png"/>
+                        <Image Source="./Icons/help.png"/>
                     </MenuItem.Icon>
                     <MenuItem Header="About">
                         <MenuItem.Icon>
-                            <Image Source="/Pl/Icons/about.png  "/>
+                            <Image Source="./Icons/about.png  "/>
                         </MenuItem.Icon>
                     </MenuItem>
                 </MenuItem>
+                <uc:SearchBox Name="txtSearch" SearchBoxTextChanged="TxtSearch_SearchBoxTextChanged"></uc:SearchBox>
             </Menu>
         </DockPanel>
-        <DataGrid x:Name="dgMemmbers" HorizontalAlignment="Left" Height="261" Margin="0,35,0,0" 
-                  VerticalAlignment="Top" Width="328" IsSynchronizedWithCurrentItem="True" AutoGenerateColumns="False">
+        <DataGrid x:Name="dgMemmbers" Height="auto" Margin="0,26,0,0" 
+                  VerticalAlignment="Top" IsSynchronizedWithCurrentItem="True" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding ID}"/>
                 <DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
                 <DataGridTextColumn Header="Credit" Binding="{Binding Credit}"/>
             </DataGrid.Columns>
         </DataGrid>
-
-
     </Grid>
 </Window>

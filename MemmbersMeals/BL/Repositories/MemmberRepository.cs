@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 
@@ -7,7 +6,7 @@ namespace MemmbersMeals.BL.Repositories
 {
     public class MemmberRepository : Repository<Memmber>, IMemmberRepository
     {
-        private DbContext context;
+        private readonly DbContext context;
         public MemmberRepository(DbContext context)
             : base(context)
         {

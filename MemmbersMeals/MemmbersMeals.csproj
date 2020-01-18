@@ -217,13 +217,19 @@
     <Resource Include="PL\Icons\meal.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="PL\meal.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="PL\Icons\account-debtor.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="PL\Icons\debt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PL\Icons\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\WpfUserControls\SearchBox\SearchBox.csproj">
+      <Project>{f26b0b41-3002-4030-adb9-4461a0301243}</Project>
+      <Name>SearchBox</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
