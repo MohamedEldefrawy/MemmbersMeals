@@ -66,12 +66,20 @@
             </Menu>
         </DockPanel>
         <DataGrid x:Name="dgMemmbers" Height="auto" Margin="0,26,0,0" 
-                  VerticalAlignment="Top" IsSynchronizedWithCurrentItem="True" AutoGenerateColumns="False">
+                  VerticalAlignment="Top" IsSynchronizedWithCurrentItem="True" AutoGenerateColumns="False"
+                  CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding ID}"/>
                 <DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
                 <DataGridTextColumn Header="Credit" Binding="{Binding Credit}"/>
             </DataGrid.Columns>
+
+            <DataGrid.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Edit"/>
+                    <MenuItem Header="Delete"/>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
         </DataGrid>
     </Grid>
 </Window>
