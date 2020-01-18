@@ -116,6 +116,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PL\EditMemmber.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PL\MainMenu.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -123,6 +127,9 @@
     <Compile Include="PL\App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PL\EditMemmber.xaml.cs">
+      <DependentUpon>EditMemmber.xaml</DependentUpon>
     </Compile>
     <Compile Include="PL\MainMenu.xaml.cs">
       <DependentUpon>MainMenu.xaml</DependentUpon>

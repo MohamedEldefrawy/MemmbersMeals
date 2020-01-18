@@ -1,11 +1,11 @@
-﻿<Window Name="frmAddMemmber" 
-    x:Class="MemmbersMeals.AddMemmber"
+﻿<Window x:Class="MemmbersMeals.PL.EditMemmber"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MemmbersMeals.PL"
         mc:Ignorable="d"
-        Title="Add Memmber" Height="152.872" Width="190.059" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="./Icons/addMemmber.png" ShowInTaskbar="False">
+        Title="Edit Memmber" Height="152.872" Width="190.059" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="./Icons/addMemmber.png" ShowInTaskbar="False">
     <Grid>
         <Label Content="Name" HorizontalAlignment="Left" Margin="4,7,0,0" VerticalAlignment="Top" Name="lblName"/>
         <Label Content="Credit" HorizontalAlignment="Left" Margin="4,46,0,0" VerticalAlignment="Top"/>

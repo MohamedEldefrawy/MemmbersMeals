@@ -7,17 +7,16 @@
         mc:Ignorable="d"
         Title="Add Meal" Height="240.5" Width="244.5" ResizeMode="NoResize" ShowInTaskbar="False" WindowStartupLocation="CenterScreen" Icon="meal.ico">
     <Grid Margin="0,0,4,-1">
-
-        <Label x:Name="lblMealType" Content="Type" HorizontalAlignment="Left" Margin="10,9,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.543,1.231"/>
-        <Label x:Name="lblPrice" Content="Price" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblDate" Content="Date" HorizontalAlignment="Left" Margin="10,128,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.003,0.378"/>
-        <TextBox x:Name="txtPrice" HorizontalAlignment="Left" Height="24" Margin="76,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148"/>
-        <ComboBox x:Name="cmbMealType" HorizontalAlignment="Left" Margin="76,9,0,0" VerticalAlignment="Top" Width="148"/>
-        <DatePicker x:Name="datpicMeal" HorizontalAlignment="Left" Margin="76,128,0,0" VerticalAlignment="Top" Width="148"/>
-        <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="76,177,0,0" VerticalAlignment="Top" Width="75" Click="btnSave_Click" RenderTransformOrigin="0.467,2.1"/>
-        <Label x:Name="lblMemmberName" Content="Memmber" HorizontalAlignment="Left" Margin="10,89,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="cmbMemmber" HorizontalAlignment="Left" Margin="76,89,0,0" VerticalAlignment="Top" Width="148"
-                  IsEditable="True" IsReadOnly="True" Text="Select memmber"/>
+        <Label x:Name="lblMealType" Content="Type" HorizontalAlignment="Left" Margin="5,9,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.543,1.231" Grid.Column="1"/>
+        <Label x:Name="lblPrice" Content="Price" HorizontalAlignment="Left" Margin="5,45,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label x:Name="lblDate" Content="Date" HorizontalAlignment="Left" Margin="5,128,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.003,0.378" Grid.Column="1"/>
+        <TextBox x:Name="txtPrice" HorizontalAlignment="Left" Height="24" Margin="71,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <ComboBox x:Name="cmbMealType" HorizontalAlignment="Left" Margin="71,9,0,0" VerticalAlignment="Top" Width="148" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <DatePicker x:Name="datpicMeal" HorizontalAlignment="Left" Margin="71,128,0,0" VerticalAlignment="Top" Width="148" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="71,177,0,0" VerticalAlignment="Top" Width="75" Click="btnSave_Click" RenderTransformOrigin="0.467,2.1" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <Label x:Name="lblMemmberName" Content="Memmber" HorizontalAlignment="Left" Margin="5,89,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <ComboBox x:Name="cmbMemmber" HorizontalAlignment="Left" Margin="71,89,0,0" VerticalAlignment="Top" Width="148"
+                  IsEditable="True" IsReadOnly="True" Text="Select memmber" Grid.ColumnSpan="2" Grid.Column="1"/>
 
     </Grid>
 </Window>

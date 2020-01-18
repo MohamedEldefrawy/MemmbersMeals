@@ -52,5 +52,17 @@ namespace MemmbersMeals
             else
                 dgMemmbers.ItemsSource = unitOFWork.Memmbers.GetMemmberbyName(txtSearch.Text);
         }
+
+        private void btnEditMemmber_Click(object sender, RoutedEventArgs e)
+        {
+            Memmber selectedMemmber = (Memmber)dgMemmbers.SelectedItem;
+            EditMemmber editMemmber = new EditMemmber(selectedMemmber.ID);
+            editMemmber.Show();
+        }
+
+        private void btnDeleteMemmber_Click(object sender, RoutedEventArgs e)
+        {
+            //Do somthing
+        }
     }
 }

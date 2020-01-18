@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:MemmbersMeals"
         xmlns:uc="clr-namespace:SearchBox;assembly=SearchBox"
         mc:Ignorable="d"
-        Title="Memmbers Meals" Height="327" Width="316.5" Icon="Icons/MemmbersMeals.png" WindowStartupLocation="CenterScreen" HorizontalAlignment="Center" ResizeMode="NoResize">
+        Title="Memmbers Meals" Height="327" Width="316.5" Icon="./Icons/MemmbersMeals.png" WindowStartupLocation="CenterScreen" HorizontalAlignment="Center" ResizeMode="NoResize">
     <Grid>
         <DockPanel HorizontalAlignment="Left" Height="auto" LastChildFill="False" VerticalAlignment="Top" Width="310">
             <Menu DockPanel.Dock="Top" Height="auto" Width="auto" >
@@ -76,8 +76,8 @@
 
             <DataGrid.ContextMenu>
                 <ContextMenu>
-                    <MenuItem Header="Edit"/>
-                    <MenuItem Header="Delete"/>
+                    <MenuItem Header="Edit" Name="btnEditMemmber" Click="btnEditMemmber_Click"/>
+                    <MenuItem Header="Delete" Name="btnDeleteMemmber" Click="btnDeleteMemmber_Click"/>
                 </ContextMenu>
             </DataGrid.ContextMenu>
         </DataGrid>
