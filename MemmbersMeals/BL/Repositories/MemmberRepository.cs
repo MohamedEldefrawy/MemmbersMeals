@@ -25,7 +25,7 @@ namespace MemmbersMeals.BL.Repositories
 
         public IEnumerable<Memmber> GetMemmberbyName(string name)
         {
-            return context.Set<Memmber>().Where(m => m.Name.StartsWith(name)).ToList();
+            return context.Set<Memmber>().Where(m => m.Name.Contains(name)).ToList();
         }
     }
 }
