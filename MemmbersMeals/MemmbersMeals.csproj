@@ -101,6 +101,8 @@
     <Compile Include="BL\Repositories\MealRepository.cs" />
     <Compile Include="BL\Repositories\MemmberRepository.cs" />
     <Compile Include="BL\Repositories\Repository.cs" />
+    <Compile Include="DAL\Configrations\MealsConfigs.cs" />
+    <Compile Include="DAL\Configrations\MemmbersConfigs.cs" />
     <Compile Include="DAL\UnitOFWork.cs" />
     <Compile Include="Migrations\202001181539019_InitialMigration.cs" />
     <Compile Include="Migrations\202001181539019_InitialMigration.designer.cs">
@@ -193,9 +195,7 @@
     <Analyzer Include="..\packages\Microsoft.NetFramework.Analyzers.2.9.8\analyzers\dotnet\cs\Microsoft.NetFramework.Analyzers.dll" />
     <Analyzer Include="..\packages\Microsoft.NetFramework.Analyzers.2.9.8\analyzers\dotnet\cs\Microsoft.NetFramework.CSharp.Analyzers.dll" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DAL\Configrations\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="PL\Icons\MemmbersMeals.png" />
   </ItemGroup>

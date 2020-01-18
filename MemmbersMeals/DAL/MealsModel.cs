@@ -1,5 +1,6 @@
 namespace MemmbersMeals
 {
+    using MemmbersMeals.DAL.Configrations;
     using System.Data.Entity;
 
     public partial class MealsModel : DbContext
@@ -14,18 +15,8 @@ namespace MemmbersMeals
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Meal>()
-                .Property(e => e.Price)
-                .HasPrecision(9, 2);
-
-            modelBuilder.Entity<Meal>()
-                .HasRequired(m => m.Memmber)
-                .WithMany(a => a.Meals)
-                .HasForeignKey(m => m.MemmberID);
-
-            modelBuilder.Entity<Memmber>()
-                .Property(e => e.Credit)
-                .HasPrecision(9, 2);
+            modelBuilder.Configurations.Add(new MealsConfigs());
+            modelBuilder.Configurations.Add(new MemmbersConfigs());
         }
     }
 }
