@@ -13,6 +13,9 @@ namespace MemmbersMeals.DAL.Configrations
         {
             Property(e => e.Credit)
                .HasPrecision(9, 2);
+            Property(m => m.IsDeleted)
+                .IsRequired()
+                .HasColumnType("bit");
         }
     }
 }

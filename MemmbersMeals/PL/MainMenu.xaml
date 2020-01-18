@@ -18,7 +18,7 @@
                         <MenuItem.Icon>
                             <Image Source="./Icons/add.png"/>
                         </MenuItem.Icon>
-                        <MenuItem Header="All Memmber"  Name="mnitmAddMemmber" Click="MnitmAddMemmber_Click">
+                        <MenuItem Header="Memmber"  Name="mnitmAddMemmber" Click="MnitmAddMemmber_Click">
                             <MenuItem.Icon>
                                 <Image Source="./Icons/addMemmber.png"/>
                             </MenuItem.Icon>

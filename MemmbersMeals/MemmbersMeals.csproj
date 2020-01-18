@@ -112,6 +112,10 @@
     <Compile Include="Migrations\202001181610247_RenameForiegnKeyMemmberID.designer.cs">
       <DependentUpon>202001181610247_RenameForiegnKeyMemmberID.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202001181648294_AddIsDeletedPropToMemmbersmodel.cs" />
+    <Compile Include="Migrations\202001181648294_AddIsDeletedPropToMemmbersmodel.designer.cs">
+      <DependentUpon>202001181648294_AddIsDeletedPropToMemmbersmodel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PL\AddMeal.xaml.cs">
       <DependentUpon>AddMeal.xaml</DependentUpon>
@@ -170,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202001181610247_RenameForiegnKeyMemmberID.resx">
       <DependentUpon>202001181610247_RenameForiegnKeyMemmberID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001181648294_AddIsDeletedPropToMemmbersmodel.resx">
+      <DependentUpon>202001181648294_AddIsDeletedPropToMemmbersmodel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -11,10 +11,12 @@ namespace MemmbersMeals
     public partial class MainWindow : Window
     {
         readonly UnitOFWork unitOFWork = new UnitOFWork(new MealsModel());
+        private Memmber SelectedMemmber;
+
         public MainWindow()
         {
             InitializeComponent();
-            dgMemmbers.ItemsSource = unitOFWork.Memmbers.GetAll().ToList();
+            dgMemmbers.ItemsSource = unitOFWork.Memmbers.GetAll().Where(m => m.IsDeleted == false).ToList();
         }
 
         private void MnitmAddMemmber_Click(object sender, RoutedEventArgs e)
@@ -25,7 +27,8 @@ namespace MemmbersMeals
 
         private void BtnViewAllMemmbers_Click(object sender, RoutedEventArgs e)
         {
-            dgMemmbers.ItemsSource = unitOFWork.Memmbers.GetAll().ToList();
+            dgMemmbers.ItemsSource = unitOFWork.Memmbers.GetAll()
+                .Where(m => m.IsDeleted == false).ToList();
         }
 
         private void MnitmAddMeal_Click(object sender, RoutedEventArgs e)
@@ -36,33 +39,55 @@ namespace MemmbersMeals
 
         private void BtnViewAllDebtMemmbers_Click(object sender, RoutedEventArgs e)
         {
-            dgMemmbers.ItemsSource = unitOFWork.Memmbers.GetDebitMemmbers().ToList();
+            dgMemmbers.ItemsSource = unitOFWork.Memmbers.GetDebitMemmbers()
+                .Where(m => m.IsDeleted == false).ToList();
         }
 
         private void BtnViewAllInDebtMemmbers_Click(object sender, RoutedEventArgs e)
         {
-            dgMemmbers.ItemsSource = unitOFWork.Memmbers.GetInDebitMemmbers().ToList();
+            dgMemmbers.ItemsSource = unitOFWork.Memmbers.GetInDebitMemmbers()
+                .Where(m => m.IsDeleted == false).ToList();
         }
 
         private void TxtSearch_SearchBoxTextChanged(object sender, RoutedEventArgs e)
         {
             if (txtSearch.Text == "Search")
 
-                dgMemmbers.ItemsSource = unitOFWork.Memmbers.GetAll().ToList();
+                dgMemmbers.ItemsSource = unitOFWork.Memmbers.GetAll()
+                    .Where(m => m.IsDeleted == false).ToList();
             else
-                dgMemmbers.ItemsSource = unitOFWork.Memmbers.GetMemmberbyName(txtSearch.Text);
+                dgMemmbers.ItemsSource = unitOFWork.Memmbers.GetMemmberbyName(txtSearch.Text)
+                    .Where(m => m.IsDeleted == false).ToList();
         }
-
         private void btnEditMemmber_Click(object sender, RoutedEventArgs e)
         {
-            Memmber selectedMemmber = (Memmber)dgMemmbers.SelectedItem;
-            EditMemmber editMemmber = new EditMemmber(selectedMemmber.ID);
+            SelectedMemmber = (Memmber)dgMemmbers.SelectedItem;
+            EditMemmber editMemmber = new EditMemmber(SelectedMemmber.ID);
             editMemmber.Show();
         }
 
         private void btnDeleteMemmber_Click(object sender, RoutedEventArgs e)
         {
-            //Do somthing
+            var result = MessageBox.Show("Are you sure", "Alert", MessageBoxButton.YesNo);
+            SelectedMemmber = (Memmber)dgMemmbers.SelectedItem;
+            switch (result)
+            {
+                case MessageBoxResult.None:
+                    break;
+                case MessageBoxResult.OK:
+                    break;
+                case MessageBoxResult.Cancel:
+                    break;
+                case MessageBoxResult.Yes:
+                    unitOFWork.Memmbers.Remove(SelectedMemmber);
+                    unitOFWork.Complete();
+                    unitOFWork.Dispose();
+                    break;
+                case MessageBoxResult.No:
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }

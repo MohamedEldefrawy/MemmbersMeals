@@ -8,7 +8,7 @@ namespace MemmbersMeals.PL
     /// <summary>
     /// Interaction logic for AddMeal.xaml
     /// </summary>
-    public partial class AddMeal : Window, IDisposable
+    public partial class AddMeal : Window
     {
         UnitOFWork unitOfWork = new UnitOFWork(new MealsModel());
         public AddMeal()
@@ -19,11 +19,6 @@ namespace MemmbersMeals.PL
             cmbMemmber.ItemsSource = unitOfWork.Memmbers.GetAll().ToList().Select(m => m.Name);
             datpicMeal.SelectedDate = DateTime.Now;
             txtPrice.Focus();
-        }
-
-        public void Dispose()
-        {
-            unitOfWork.Dispose();
         }
 
         private void btnSave_Click(object sender, RoutedEventArgs e)

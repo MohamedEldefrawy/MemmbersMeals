@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MemmbersMeals.PL"
         mc:Ignorable="d"
-        Title="Add Meal" Height="240.5" Width="244.5" ResizeMode="NoResize" ShowInTaskbar="False" WindowStartupLocation="CenterScreen" Icon="meal.ico">
+        Title="Add Meal" Height="240.5" Width="244.5" ResizeMode="NoResize" ShowInTaskbar="False" WindowStartupLocation="CenterScreen" Icon="./Icons/meal.ico">
     <Grid Margin="0,0,4,-1">
         <Label x:Name="lblMealType" Content="Type" HorizontalAlignment="Left" Margin="5,9,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.543,1.231" Grid.Column="1"/>
         <Label x:Name="lblPrice" Content="Price" HorizontalAlignment="Left" Margin="5,45,0,0" VerticalAlignment="Top" Grid.Column="1"/>

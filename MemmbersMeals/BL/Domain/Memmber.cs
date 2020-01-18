@@ -18,6 +18,8 @@ namespace MemmbersMeals
 
         public decimal? Credit { get; set; }
 
+        public bool IsDeleted { get; set; } = false;
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Meal> Meals { get; set; }
     }
