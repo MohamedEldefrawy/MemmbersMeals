@@ -57,34 +57,41 @@ namespace MemmbersMeals
             }
             else
             {
-                foreach (var error in result.Errors)
-                {
-                    switch (error.PropertyName)
-                    {
-                        case "Name":
-                            UIUtilities.TextBlockErrorEffect(txtNameErrorMessage, error.ErrorMessage);
-                            UIUtilities.TextBoxErrorEffect(txtName);
-                            if (result.Errors.Count == 1)
-                            {
-                                UIUtilities.TextBlocksRefresh(txtCreditErrorMessage);
-                                UIUtilities.TextBoxsErrorRefresh(txtCredit);
-                            }
+                GenerateErrorMessages(result);
+            }
+        }
+        #endregion
 
-                            break;
-                        case "Credit":
-                            UIUtilities.TextBlockErrorEffect(txtCreditErrorMessage, error.ErrorMessage);
-                            UIUtilities.TextBoxErrorEffect(txtCredit);
-                            if (result.Errors.Count == 1)
-                            {
-                                UIUtilities.TextBlocksRefresh(txtNameErrorMessage);
-                                UIUtilities.TextBoxsErrorRefresh(txtName);
-                            }
-                            break;
-                    }
+        private void GenerateErrorMessages(FluentValidation.Results.ValidationResult result)
+        {
+            foreach (var error in result.Errors)
+            {
+                switch (error.PropertyName)
+                {
+                    case "Name":
+                        UIUtilities.TextBlockErrorEffect(txtNameErrorMessage, error.ErrorMessage);
+                        UIUtilities.TextBoxErrorEffect(txtName);
+                        if (result.Errors.Count == 1)
+                        {
+                            UIUtilities.TextBlocksRefresh(txtCreditErrorMessage);
+                            UIUtilities.TextBoxsErrorRefresh(txtCredit);
+                        }
+
+                        break;
+                    case "Credit":
+                        UIUtilities.TextBlockErrorEffect(txtCreditErrorMessage, error.ErrorMessage);
+                        UIUtilities.TextBoxErrorEffect(txtCredit);
+                        if (result.Errors.Count == 1)
+                        {
+                            UIUtilities.TextBlocksRefresh(txtNameErrorMessage);
+                            UIUtilities.TextBoxsErrorRefresh(txtName);
+                        }
+                        break;
+                    default:
+                        break;
                 }
             }
         }
 
-        #endregion
     }
 }
