@@ -15,6 +15,7 @@ namespace MemmbersMeals.BL.Repositories
 
         public IEnumerable<Memmber> GetDebitMemmbers()
         {
+
             return context.Set<Memmber>().Where(m => m.Credit > 0).ToList();
         }
 

@@ -71,7 +71,13 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="FluentValidation, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidation.8.6.1\lib\net45\FluentValidation.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.4.1\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Runtime.Serialization" />
@@ -116,6 +122,10 @@
     <Compile Include="Migrations\202001181648294_AddIsDeletedPropToMemmbersmodel.designer.cs">
       <DependentUpon>202001181648294_AddIsDeletedPropToMemmbersmodel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202001200003415_SyncDatabase.cs" />
+    <Compile Include="Migrations\202001200003415_SyncDatabase.designer.cs">
+      <DependentUpon>202001200003415_SyncDatabase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PL\AddMeal.xaml.cs">
       <DependentUpon>AddMeal.xaml</DependentUpon>
@@ -156,6 +166,7 @@
     <Compile Include="DAL\MealsModel.cs" />
     <Compile Include="BL\Domain\Memmber.cs" />
     <Compile Include="PL\MealsType.cs" />
+    <Compile Include="PL\Validators\MemmberValidators.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -177,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202001181648294_AddIsDeletedPropToMemmbersmodel.resx">
       <DependentUpon>202001181648294_AddIsDeletedPropToMemmbersmodel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001200003415_SyncDatabase.resx">
+      <DependentUpon>202001200003415_SyncDatabase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

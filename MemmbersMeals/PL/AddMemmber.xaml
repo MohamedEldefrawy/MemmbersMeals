@@ -5,12 +5,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Add Memmber" Height="152.872" Width="190.059" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="./Icons/addMemmber.png" ShowInTaskbar="False">
+        Title="Add Memmber" Height="197.872" Width="233.059" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="./Icons/addMemmber.png" ShowInTaskbar="False">
     <Grid>
-        <Label Content="Name" HorizontalAlignment="Left" Margin="4,7,0,0" VerticalAlignment="Top" Name="lblName"/>
-        <Label Content="Credit" HorizontalAlignment="Left" Margin="4,46,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="47,11,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Name="txtName" ForceCursor="True"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="47,50,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Name="txtCredit"/>
-        <Button Content="Save" HorizontalAlignment="Left" Margin="47,88,0,0" VerticalAlignment="Top" Width="120" Name="btnSave" Click="btnSave_Click"/>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="0,11,0,0" VerticalAlignment="Top" Name="lblName"/>
+        <Label Content="Credit" HorizontalAlignment="Left" Margin="0,68,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="47,11,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="147" Name="txtName" ForceCursor="True"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="47,68,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="147" Name="txtCredit"/>
+        <Button Content="Save" HorizontalAlignment="Left" Margin="59,128,0,0" VerticalAlignment="Top" Width="120" Name="btnSave" Click="btnSave_Click"/>
+        <TextBlock x:Name="txtNameErrorMessage" HorizontalAlignment="Left" Margin="47,34,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="147"/>
+        <TextBlock x:Name="txtCreditErrorMessage" HorizontalAlignment="Left" Margin="47,91,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="147"/>
     </Grid>
 </Window>

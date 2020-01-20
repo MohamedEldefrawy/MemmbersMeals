@@ -11,11 +11,12 @@ namespace MemmbersMeals.DAL.Configrations
     {
         public MemmbersConfigs()
         {
-            Property(e => e.Credit)
-               .HasPrecision(9, 2);
             Property(m => m.IsDeleted)
                 .IsRequired()
                 .HasColumnType("bit");
+
+            Property(m => m.Credit)
+                .HasPrecision(9, 2);
         }
     }
 }
