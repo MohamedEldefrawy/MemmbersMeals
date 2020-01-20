@@ -156,6 +156,7 @@
     <Compile Include="PL\EditMemmber.xaml.cs">
       <DependentUpon>EditMemmber.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PL\Helpers\UIUtilities.cs" />
     <Compile Include="PL\MainMenu.xaml.cs">
       <DependentUpon>MainMenu.xaml</DependentUpon>
       <SubType>Code</SubType>

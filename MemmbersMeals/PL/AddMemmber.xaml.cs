@@ -1,5 +1,6 @@
 ﻿using FluentValidation.Results;
 using MemmbersMeals.DAL;
+using MemmbersMeals.PL.Helpers;
 using MemmbersMeals.PL.Validators;
 using System;
 using System.ComponentModel;
@@ -25,55 +26,10 @@ namespace MemmbersMeals
         {
             InitializeComponent();
             txtName.Focus();
-            ErrorLabelsConfig(txtCreditErrorMessage, txtNameErrorMessage);
+            UIUtilities.ErrorLabelsConfig(txtCreditErrorMessage, txtNameErrorMessage);
         }
         #endregion
 
-        #region Controls Configurations
-        private void ErrorLabelsConfig(params TextBlock[] errorsMessages)
-        {
-            foreach (var errorMessage in errorsMessages)
-            {
-                errorMessage.Text = "";
-                errorMessage.TextWrapping = TextWrapping.Wrap;
-                errorMessage.Visibility = Visibility.Collapsed;
-                errorMessage.Foreground = Brushes.IndianRed;
-                errorMessage.FontSize = 10;
-                errorMessage.FontWeight = FontWeights.Bold;
-            }
-        }
-
-        private void TextBlocksRefresh(params TextBlock[] textBlocks)
-        {
-            foreach (var textBlock in textBlocks)
-            {
-                textBlock.Visibility = Visibility.Collapsed;
-            }
-        }
-
-        private void TextBoxsRefresh(params TextBox[] textBoxs)
-        {
-            foreach (var textBox in textBoxs)
-            {
-                textBox.BorderBrush = Brushes.Black;
-
-            }
-        }
-
-        private void TextBlockErrorEffect(TextBlock textBlocks, string error)
-        {
-            textBlocks.Visibility = Visibility.Visible;
-            textBlocks.Text = error;
-        }
-
-        private void TextBoxErrorEffect(params TextBox[] textBoxes)
-        {
-            foreach (var textbox in textBoxes)
-            {
-                textbox.BorderBrush = Brushes.IndianRed;
-            }
-        }
-        #endregion
 
         #region Event listners
         private void btnSave_Click(object sender, RoutedEventArgs e)
@@ -90,8 +46,8 @@ namespace MemmbersMeals
 
             if (result.IsValid)
             {
-                TextBlocksRefresh(txtCreditErrorMessage, txtNameErrorMessage);
-                TextBoxsRefresh(txtCredit, txtName);
+                UIUtilities.TextBlocksRefresh(txtCreditErrorMessage, txtNameErrorMessage);
+                UIUtilities.TextBoxsErrorRefresh(txtCredit, txtName);
                 unitOFWork.Memmbers.Add(CreatedMemmber);
                 unitOFWork.Complete();
                 txtName.Clear();
@@ -106,13 +62,23 @@ namespace MemmbersMeals
                     switch (error.PropertyName)
                     {
                         case "Name":
-                            TextBlockErrorEffect(txtNameErrorMessage, error.ErrorMessage);
-                            TextBoxErrorEffect(txtName);
+                            UIUtilities.TextBlockErrorEffect(txtNameErrorMessage, error.ErrorMessage);
+                            UIUtilities.TextBoxErrorEffect(txtName);
+                            if (result.Errors.Count == 1)
+                            {
+                                UIUtilities.TextBlocksRefresh(txtCreditErrorMessage);
+                                UIUtilities.TextBoxsErrorRefresh(txtCredit);
+                            }
 
                             break;
                         case "Credit":
-                            TextBlockErrorEffect(txtCreditErrorMessage, error.ErrorMessage);
-                            TextBoxErrorEffect(txtCredit);
+                            UIUtilities.TextBlockErrorEffect(txtCreditErrorMessage, error.ErrorMessage);
+                            UIUtilities.TextBoxErrorEffect(txtCredit);
+                            if (result.Errors.Count == 1)
+                            {
+                                UIUtilities.TextBlocksRefresh(txtNameErrorMessage);
+                                UIUtilities.TextBoxsErrorRefresh(txtName);
+                            }
                             break;
                     }
                 }
