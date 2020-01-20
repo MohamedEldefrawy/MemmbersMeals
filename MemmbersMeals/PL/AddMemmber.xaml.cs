@@ -34,12 +34,11 @@ namespace MemmbersMeals
         #region Event listners
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-            decimal CreditResult;
-            decimal.TryParse(txtCredit.Text, out CreditResult);
+
             CreatedMemmber = new Memmber
             {
                 Name = txtName.Text,
-                Credit = CreditResult
+                Credit = ParseDecimalString.Parse(txtCredit.Text)
             };
 
             var result = ValidationRules.Validate(CreatedMemmber);
@@ -62,6 +61,7 @@ namespace MemmbersMeals
         }
         #endregion
 
+     
         private void GenerateErrorMessages(FluentValidation.Results.ValidationResult result)
         {
             foreach (var error in result.Errors)

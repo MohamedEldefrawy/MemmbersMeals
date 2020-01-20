@@ -11,14 +11,18 @@ namespace MemmbersMeals.PL.Helpers
 {
     public static class UIUtilities
     {
+        public static SolidColorBrush ErrorColorEffect { get; set; } = Brushes.IndianRed;
+        public static SolidColorBrush NormalBorderColor { get; set; } = Brushes.LightGray;
+
         public static void ErrorLabelsConfig(params TextBlock[] errorsMessages)
         {
+
             foreach (var errorMessage in errorsMessages)
             {
                 errorMessage.Text = "";
                 errorMessage.TextWrapping = TextWrapping.Wrap;
                 errorMessage.Visibility = Visibility.Collapsed;
-                errorMessage.Foreground = Brushes.IndianRed;
+                errorMessage.Foreground = ErrorColorEffect;
                 errorMessage.FontSize = 10;
                 errorMessage.FontWeight = FontWeights.Bold;
             }
@@ -36,7 +40,7 @@ namespace MemmbersMeals.PL.Helpers
         {
             foreach (var textBox in textBoxs)
             {
-                textBox.BorderBrush = Brushes.LightGray;
+                textBox.BorderBrush = NormalBorderColor;
             }
         }
 
@@ -46,11 +50,21 @@ namespace MemmbersMeals.PL.Helpers
             textBlocks.Text = error;
         }
 
+        public static void DateTimeErrorEffect(DatePicker datePicker)
+        {
+            datePicker.BorderBrush = ErrorColorEffect;
+        }
+
+        public static void DatePickerRefresh(DatePicker datePicker)
+        {
+            datePicker.BorderBrush = NormalBorderColor;
+        }
+
         public static void TextBoxErrorEffect(params TextBox[] textBoxes)
         {
             foreach (var textbox in textBoxes)
             {
-                textbox.BorderBrush = Brushes.IndianRed;
+                textbox.BorderBrush = ErrorColorEffect;
             }
         }
     }
