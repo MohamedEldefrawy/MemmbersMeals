@@ -27,6 +27,7 @@ namespace MemmbersMeals
 
         private void BtnViewAllMemmbers_Click(object sender, RoutedEventArgs e)
         {
+            ShowMemmbersDataGrid();
             dgMemmbers.ItemsSource = unitOFWork.Memmbers.GetAll()
                 .Where(m => m.IsDeleted == false).ToList();
         }
@@ -39,18 +40,22 @@ namespace MemmbersMeals
 
         private void BtnViewAllDebtMemmbers_Click(object sender, RoutedEventArgs e)
         {
+            ShowMemmbersDataGrid();
             dgMemmbers.ItemsSource = unitOFWork.Memmbers.GetDebitMemmbers()
                 .Where(m => m.IsDeleted == false).ToList();
         }
 
         private void BtnViewAllInDebtMemmbers_Click(object sender, RoutedEventArgs e)
         {
+
+            ShowMemmbersDataGrid();
             dgMemmbers.ItemsSource = unitOFWork.Memmbers.GetInDebitMemmbers()
                 .Where(m => m.IsDeleted == false).ToList();
         }
 
         private void TxtSearch_SearchBoxTextChanged(object sender, RoutedEventArgs e)
         {
+            ShowMemmbersDataGrid();
             if (txtSearch.Text == "Search")
 
                 dgMemmbers.ItemsSource = unitOFWork.Memmbers.GetAll()
@@ -88,6 +93,24 @@ namespace MemmbersMeals
                 default:
                     break;
             }
+        }
+
+        private void btnViewAllMealsOfSelectedMemmber_Click(object sender, RoutedEventArgs e)
+        {
+            SelectedMemmber = (Memmber)dgMemmbers.SelectedItem;
+            ShowMealsDataGrid();
+            dgMemmbersMeals.ItemsSource = unitOFWork.Meals.GetAllMealsOfMemmber(SelectedMemmber.ID).ToList();
+        }
+
+        private void ShowMealsDataGrid()
+        {
+            dgMemmbers.Visibility = Visibility.Collapsed;
+            dgMemmbersMeals.Visibility = Visibility.Visible;
+        }
+        private void ShowMemmbersDataGrid()
+        {
+            dgMemmbersMeals.Visibility = Visibility.Collapsed;
+            dgMemmbers.Visibility = Visibility.Visible;
         }
     }
 }

@@ -78,8 +78,20 @@
                 <ContextMenu>
                     <MenuItem Header="Edit" Name="btnEditMemmber" Click="btnEditMemmber_Click"/>
                     <MenuItem Header="Delete" Name="btnDeleteMemmber" Click="btnDeleteMemmber_Click"/>
+                    <MenuItem Header="View All Meals" Name="btnViewAllMealsOfSelectedMemmber" Click="btnViewAllMealsOfSelectedMemmber_Click"/>
                 </ContextMenu>
             </DataGrid.ContextMenu>
         </DataGrid>
+        <DataGrid x:Name="dgMemmbersMeals" Height="auto" Margin="0,26,0,0" 
+                  VerticalAlignment="Top" IsSynchronizedWithCurrentItem="True" AutoGenerateColumns="False"
+                  CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True" Visibility="Collapsed">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Meal Type" Binding="{Binding MealsType}"/>
+                <DataGridTextColumn Header="Meal Price" Binding="{Binding MealPrice}"/>
+                <DataGridTextColumn Header="Meal Date" Binding="{Binding MealDate}"/>
+            </DataGrid.Columns>
+
+        </DataGrid>
+
     </Grid>
 </Window>

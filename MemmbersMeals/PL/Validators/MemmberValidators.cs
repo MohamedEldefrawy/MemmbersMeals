@@ -22,7 +22,6 @@ namespace MemmbersMeals.PL.Validators
                 .Cascade(CascadeMode.StopOnFirstFailure)
                 .NotEmpty().WithMessage("Please enter valid {PropertyName}.")
                 .GreaterThanOrEqualTo(0);
-
         }
 
         protected bool BeAValidName(string name)
@@ -30,9 +29,7 @@ namespace MemmbersMeals.PL.Validators
             name = name
                 .Replace(" ", "")
                 .Replace("-", "");
-
             return name.All(Char.IsLetter);
-
         }
     }
 }

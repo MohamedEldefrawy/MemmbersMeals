@@ -28,7 +28,7 @@ namespace MemmbersMeals.BL.Repositories
         {
             return context.Set<Memmber>().Where(m => m.Name.Contains(name)).ToList();
         }
-
+       
         public void UpdateMemmber(Memmber memmber)
         {
             var result = context.Set<Memmber>().SingleOrDefault(m => m.ID == memmber.ID);
@@ -39,5 +39,6 @@ namespace MemmbersMeals.BL.Repositories
                 context.Entry(result).State = EntityState.Modified;
             }
         }
+         
     }
 }

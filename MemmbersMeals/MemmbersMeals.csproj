@@ -22,7 +22,8 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <PublishUrl>publish\</PublishUrl>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>E:\C# workspace\MemmbersMeals\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -34,7 +35,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -101,6 +101,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="BL\IUnitOfWork.cs" />
+    <Compile Include="BL\JoinModels\MemmbersMeal.cs" />
     <Compile Include="BL\Repositories\IMealRepository.cs" />
     <Compile Include="BL\Repositories\IMemmberRepository.cs" />
     <Compile Include="BL\Repositories\IRepository.cs" />
@@ -167,7 +168,7 @@
     <Compile Include="BL\Domain\Meal.cs" />
     <Compile Include="DAL\MealsModel.cs" />
     <Compile Include="BL\Domain\Memmber.cs" />
-    <Compile Include="PL\MealsType.cs" />
+    <Compile Include="PL\Enums\MealsType.cs" />
     <Compile Include="PL\Validators\MealValidator.cs" />
     <Compile Include="PL\Validators\MemmberValidators.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
