@@ -26,7 +26,7 @@ namespace MemmbersMeals.BL.Repositories
                         where (memmber.ID == ID)
                         select new MemmbersMeal()
                         {
-                            MealDate = meal.MealsDate,
+                            MealDate = meal.MealsDate.ToString("yyyy/M/d"),
                             MealPrice = meal.Price,
                             MealType = Enum.GetName(typeof(MealsType), meal.MealType)
                         };

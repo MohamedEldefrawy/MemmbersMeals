@@ -127,6 +127,10 @@
     <Compile Include="Migrations\202001200003415_SyncDatabase.designer.cs">
       <DependentUpon>202001200003415_SyncDatabase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202001241438184_changeMealDateToNotNull.cs" />
+    <Compile Include="Migrations\202001241438184_changeMealDateToNotNull.designer.cs">
+      <DependentUpon>202001241438184_changeMealDateToNotNull.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PL\AddMeal.xaml.cs">
       <DependentUpon>AddMeal.xaml</DependentUpon>
@@ -195,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202001200003415_SyncDatabase.resx">
       <DependentUpon>202001200003415_SyncDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001241438184_changeMealDateToNotNull.resx">
+      <DependentUpon>202001241438184_changeMealDateToNotNull.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

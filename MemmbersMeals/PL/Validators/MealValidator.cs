@@ -21,7 +21,7 @@ namespace MemmbersMeals.PL.Validators
                 .Must(BeAValidDate).WithMessage("Please Enter a Valid {PropertyName}");
         }
 
-        private bool BeAValidDate(DateTime? date)
+        private bool BeAValidDate(DateTime date)
         {
             return !date.Equals(default(DateTime));
         }

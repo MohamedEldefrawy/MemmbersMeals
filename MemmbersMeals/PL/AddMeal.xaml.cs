@@ -34,7 +34,7 @@ namespace MemmbersMeals.PL
         {
             Meal CreatedMeal = new Meal
             {
-                MealsDate = datpicMeal.SelectedDate,
+                MealsDate = (DateTime)datpicMeal.SelectedDate,
                 MealType = cmbMealType.SelectedIndex,
                 Price = ParseDecimalString.Parse(txtPrice.Text),
                 Memmber = unitOfWork.Memmbers.Find(m => m.Name == cmbMemmber.SelectedItem.ToString())

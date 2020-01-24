@@ -12,7 +12,7 @@ namespace MemmbersMeals
         public decimal Price { get; set; }
 
         [Column(TypeName = "date")]
-        public DateTime? MealsDate { get; set; }
+        public DateTime MealsDate { get; set; }
 
         public int MemmberID { get; set; }
         public virtual Memmber Memmber { get; set; }

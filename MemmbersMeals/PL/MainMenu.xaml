@@ -86,7 +86,7 @@
                   VerticalAlignment="Top" IsSynchronizedWithCurrentItem="True" AutoGenerateColumns="False"
                   CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True" Visibility="Collapsed">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Meal Type" Binding="{Binding MealsType}"/>
+                <DataGridTextColumn Header="Meal Type" Binding="{Binding MealType}"/>
                 <DataGridTextColumn Header="Meal Price" Binding="{Binding MealPrice}"/>
                 <DataGridTextColumn Header="Meal Date" Binding="{Binding MealDate}"/>
             </DataGrid.Columns>

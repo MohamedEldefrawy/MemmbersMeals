@@ -7,6 +7,6 @@ namespace MemmbersMeals.BL
     {
         public string MealType { get; set; }
         public decimal MealPrice { get; set; }
-        public DateTime? MealDate { get; set; }
+        public string MealDate { get; set; }
     }
 }
