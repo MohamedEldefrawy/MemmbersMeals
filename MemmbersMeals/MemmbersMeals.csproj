@@ -132,12 +132,19 @@
       <DependentUpon>202001241438184_changeMealDateToNotNull.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="PL\About.xaml.cs">
+      <DependentUpon>About.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PL\AddMeal.xaml.cs">
       <DependentUpon>AddMeal.xaml</DependentUpon>
     </Compile>
     <Compile Include="PL\AddMemmber.xaml.cs">
       <DependentUpon>AddMemmber.xaml</DependentUpon>
     </Compile>
+    <Page Include="PL\About.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PL\AddMeal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

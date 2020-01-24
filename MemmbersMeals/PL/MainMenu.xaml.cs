@@ -102,6 +102,12 @@ namespace MemmbersMeals
             dgMemmbersMeals.ItemsSource = unitOFWork.Meals.GetAllMealsOfMemmber(SelectedMemmber.ID).ToList();
         }
 
+        private void btnAbout_Click(object sender,RoutedEventArgs e)
+        {
+            About about = new About();
+            about.Show();
+        }
+
         private void ShowMealsDataGrid()
         {
             dgMemmbers.Visibility = Visibility.Collapsed;

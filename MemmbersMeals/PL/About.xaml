@@ -1,0 +1,16 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MemmbersMeals.PL"
+        xmlns:SearchBox="clr-namespace:SearchBox;assembly=SearchBox" x:Class="MemmbersMeals.PL.About"
+        mc:Ignorable="d"
+        Title="About" Height="160.77" Width="283.73"
+    ResizeMode="NoResize" Icon="./Icons/About.png" WindowStartupLocation="CenterScreen">
+    <Grid HorizontalAlignment="Right" Width="266" Margin="0,0,4,0">
+        <TextBlock HorizontalAlignment="Left" Margin="102,10,0,0" TextWrapping="Wrap" 
+                   VerticalAlignment="Top" Height="122" Width="154" FontSize="16"><Run Text="Members Meals 2019"/><LineBreak/><Run Text="© 2019 "/><Run FontWeight="Bold" Text="Mohamed Eldfrawy"/><LineBreak/><Run Text="All rights reserverd"/><LineBreak/><Hyperlink RequestNavigate="GitHub_RequestNavigate" NavigateUri="https://github.com/MohamedEldefrawy/MemmbersMeals"><Run Text="GitHub Repository"/></Hyperlink></TextBlock>
+        <Image HorizontalAlignment="Left" Height="73" Margin="10,10,0,0" VerticalAlignment="Top" Width="77" Source="./Icons/MemmbersMeals.png"/>
+    </Grid>
+</Window>

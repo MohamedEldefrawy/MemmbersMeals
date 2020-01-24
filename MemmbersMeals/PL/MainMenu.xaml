@@ -56,7 +56,7 @@
                     <MenuItem.Icon>
                         <Image Source="./Icons/help.png"/>
                     </MenuItem.Icon>
-                    <MenuItem Header="About">
+                    <MenuItem Header="About" Click="btnAbout_Click">
                         <MenuItem.Icon>
                             <Image Source="./Icons/about.png  "/>
                         </MenuItem.Icon>
